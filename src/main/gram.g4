@@ -23,7 +23,7 @@ Name: '$'?[A-Z][0-9]*;
 Variable: [a-z][0-9]*;
 GenericPredicate: [A-Z]+;
 
-file : header TERMINATOR (rootExpression TERMINATOR)* ;
+file : header TERMINATOR+ (rootExpression TERMINATOR+)* ;
 header : (expression (COMMA expression)*)? TARGET expression ;
 rootExpression: expression;
 

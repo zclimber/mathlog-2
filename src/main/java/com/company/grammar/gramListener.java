@@ -1,4 +1,4 @@
-// Generated from C:/Users/MY/IdeaProjects/hw2/src/main\gram.g4 by ANTLR 4.7
+// Generated from C:/Users/MY/IdeaProjects/mathlog-2/src/main\gram.g4 by ANTLR 4.7
 package com.company.grammar;
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 

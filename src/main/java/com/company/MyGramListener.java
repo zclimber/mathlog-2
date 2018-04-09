@@ -213,6 +213,9 @@ public class MyGramListener extends gramBaseListener {
             }
         } catch (PredicateSuccess e) {
             dw.print(ctx);
+            if (movingCtx != null) {
+                out.println();
+            }
             System.out.println("(" + Integer.toString(currentLine) + ") "
                     + e.getMessage());
         } catch (PredicateException e) {

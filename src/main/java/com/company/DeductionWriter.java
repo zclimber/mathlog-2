@@ -42,7 +42,7 @@ public class DeductionWriter {
     }
 
     public void reset() {
-        write = true;
+        write = false;
     }
 
     private String mask(String str) {
@@ -50,7 +50,7 @@ public class DeductionWriter {
     }
 
     public void printMP(gramParser.ExpressionContext context) {
-        if (!write || targetString == null) {
+        if (write || targetString == null) {
             return;
         }
         write = true;
@@ -65,7 +65,7 @@ public class DeductionWriter {
     }
 
     public void printSelf() {
-        if (!write || targetString == null) {
+        if (write || targetString == null) {
             return;
         }
         write = true;
@@ -76,7 +76,7 @@ public class DeductionWriter {
     }
 
     public void printInfer(ProofType type, ParserRuleContext from, ParserRuleContext to, String variable) {
-        if (!write || targetString == null) {
+        if (write || targetString == null) {
             return;
         }
         write = true;
@@ -92,7 +92,7 @@ public class DeductionWriter {
     }
 
     public void print(gramParser.RootExpressionContext context) {
-        if (!write) {
+        if (write) {
             return;
         }
         write = true;
